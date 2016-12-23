@@ -14,8 +14,6 @@
     UIRefreshControl *refresh;
 }
 @property (nonatomic, strong) UITableView *table;
-@property (nonatomic, strong) NSMutableArray *heightArray;
-@property (nonatomic, strong) NSMutableArray *txtArray;
 @end
 
 @implementation ViewController
@@ -31,33 +29,13 @@
     refresh = [[UIRefreshControl alloc] init];
     [refresh addTarget:self action:@selector(refreshForTable) forControlEvents:UIControlEventValueChanged];
     [self.table addSubview:refresh];
-    
-    self.heightArray = [NSMutableArray arrayWithCapacity:4];
-    [self.heightArray addObject:@40];
-    [self.heightArray addObject:@40];
-    [self.heightArray addObject:@40];
-    [self.heightArray addObject:@40];
-    [self.heightArray addObject:@40];
-    
-    self.txtArray = [NSMutableArray arrayWithCapacity:4];
-    [self.txtArray addObject:@""];
-    [self.txtArray addObject:@""];
-    [self.txtArray addObject:@""];
-    [self.txtArray addObject:@""];
 }
 
 -(void)refreshForTable{
     [refresh endRefreshing];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;
 }
 
@@ -66,23 +44,16 @@
     if (cell == nil) {
         cell = [[TestTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    cell.layer.masksToBounds = YES;
     __weak typeof(self)weakSelf = self;
-    
-    cell.cellInfo = ^(int height,NSArray *text){
-//        [self.txtArray replaceObjectAtIndex:indexPath.row withObject:text];
-//        [self.heightArray replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithFloat:height]];
-//        [weakSelf.table beginUpdates];
-//        [weakSelf.table endUpdates];
-        
+    cell.getHeight = ^(CGFloat height){
+        [weakSelf.table beginUpdates];
+        [weakSelf.table endUpdates];
     };
-
-    cell.selectionStyle =UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = [UIColor whiteColor];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [self.heightArray[indexPath.row] floatValue];
+    return 30;
 }
 @end

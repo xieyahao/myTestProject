@@ -15,6 +15,7 @@
 		DFE8AB4E1DF3EE930073B8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE8AB4C1DF3EE930073B8C4 /* LaunchScreen.storyboard */; };
 		DFE8AB591DF3EE930073B8C4 /* Test2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE8AB581DF3EE930073B8C4 /* Test2Tests.m */; };
 		DFE8AB641DF3EE930073B8C4 /* Test2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE8AB631DF3EE930073B8C4 /* Test2UITests.m */; };
+		DFE8AB761DF3F5D60073B8C4 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE8AB751DF3F5D60073B8C4 /* TestTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		DFE8AB5F1DF3EE930073B8C4 /* Test2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE8AB631DF3EE930073B8C4 /* Test2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2UITests.m; sourceTree = "<group>"; };
 		DFE8AB651DF3EE930073B8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE8AB741DF3F5D60073B8C4 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		DFE8AB751DF3F5D60073B8C4 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				DFE8AB421DF3EE930073B8C4 /* AppDelegate.m */,
 				DFE8AB441DF3EE930073B8C4 /* ViewController.h */,
 				DFE8AB451DF3EE930073B8C4 /* ViewController.m */,
+				DFE8AB741DF3F5D60073B8C4 /* TestTableViewCell.h */,
+				DFE8AB751DF3F5D60073B8C4 /* TestTableViewCell.m */,
 				DFE8AB471DF3EE930073B8C4 /* Main.storyboard */,
 				DFE8AB4A1DF3EE930073B8C4 /* Assets.xcassets */,
 				DFE8AB4C1DF3EE930073B8C4 /* LaunchScreen.storyboard */,
@@ -207,6 +212,7 @@
 				TargetAttributes = {
 					DFE8AB3A1DF3EE930073B8C4 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = UHD954T597;
 						ProvisioningStyle = Automatic;
 					};
 					DFE8AB531DF3EE930073B8C4 = {
@@ -274,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFE8AB461DF3EE930073B8C4 /* ViewController.m in Sources */,
+				DFE8AB761DF3F5D60073B8C4 /* TestTableViewCell.m in Sources */,
 				DFE8AB431DF3EE930073B8C4 /* AppDelegate.m in Sources */,
 				DFE8AB401DF3EE930073B8C4 /* main.m in Sources */,
 			);
@@ -424,7 +431,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UHD954T597;
 				INFOPLIST_FILE = Test2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhangguanqing.Test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +444,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UHD954T597;
 				INFOPLIST_FILE = Test2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhangguanqing.Test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +518,7 @@
 				DFE8AB6A1DF3EE930073B8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFE8AB6B1DF3EE930073B8C4 /* Build configuration list for PBXNativeTarget "Test2Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +527,7 @@
 				DFE8AB6D1DF3EE930073B8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFE8AB6E1DF3EE930073B8C4 /* Build configuration list for PBXNativeTarget "Test2UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +536,7 @@
 				DFE8AB701DF3EE930073B8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
